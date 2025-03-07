@@ -15,50 +15,39 @@ enum type
 class Contact
 {
 	private:
-		std::string detail[NUM];
+	// Members
+		std::string _detail[NUM];
 	public:
-
-	// Default Constructor - gives default values
+	//Orthodox Canonical
 	Contact()
 	{
 		for (int i = 0; i < NUM; i++)
-			detail[i] = "";
+			_detail[i] = "";
 	}
-
-	// Parameterized Constructor 
 	Contact(std::string arg)
 	{
-		detail[FIRST] = arg;
+		_detail[FIRST] = arg;
 		for (int i = 0; i < NUM; i++)
-			detail[i] = "";
+			_detail[i] = "";
 	}
-
-	// Copy Constructor
 	Contact(const Contact& other)
 	{
 		for (int i = 0; i < NUM; i++)
-			detail[i] = other.detail[i];
+			_detail[i] = other._detail[i];
 	}
-
-	// Assignment Operator
 	Contact& operator=(const Contact& other)
 	{
 		if (this != &other)
 		{
 			for (int i = 0; i < NUM; i++)
-				detail[i] = other.detail[i];
+				_detail[i] = other._detail[i];
 		}
 		return (*this);
 	}
-
-	// Destructor
-	~Contact()
-	{
-	}
-
+	~Contact() {};
 	// Methods 
-	void		setDetail(type field, std::string s) { detail[field] = s; }
-	std::string	getDetail(type field) { return detail[field]; }
+	void		setDetail(type field, std::string s) { _detail[field] = s; }
+	std::string	getDetail(type field) { return _detail[field]; }
 
 	void		setFirstName(std::string s) { setDetail(FIRST, s); }
 	void		setLastName(std::string s) { setDetail(LAST, s); }

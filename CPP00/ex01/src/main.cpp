@@ -53,11 +53,11 @@ int	main(void)
 	{
 		std::cout << "Enter ADD, SEARCH, EXIT:\n";
 		std::getline(std::cin, input);
-		if (input == "ADD")
+		if (input == "ADD" || input == "add")
 			add_routine(input, &phonebook);
-		else if (input == "SEARCH")
+		else if (input == "SEARCH" || input == "search")
 			search_routine(input, &phonebook, i);
-		else if (input == "EXIT")
+		else if (input == "EXIT" || input == "exit")
 			exit(0);
 		else
 			std::cout << "\nI don't know that command :(\n\n";
