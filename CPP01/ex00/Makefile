@@ -52,4 +52,4 @@ fclean:
 
 re: fclean all
 
-.PHONY: all clean fclean re phonebook zombie
+.PHONY: all clean fclean re zombie
