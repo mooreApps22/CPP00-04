@@ -1,7 +1,7 @@
 NAME = phonebook 
 
 INC = ./inc
-HEADERS = $(INC)/Contact.hpp $(INC)/Phonebook.hpp 
+HEADERS = $(INC)/Contact.hpp $(INC)/PhoneBook.hpp 
 
 CC = c++
 CFLAGS = -Wall -Werror -Wextra -g -std=c++98
